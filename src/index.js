@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { asyncWithLDProvider } from "launchdarkly-react-client-sdk";
 
-const CLIENTKEY = "609ead905193530d7c28647b";
+const CLIENTKEY = "61857702b0d62a144cc6609b";
 
 (async () => {
   const LDProvider = await asyncWithLDProvider({

@@ -6,10 +6,12 @@ const QRURL = "https://nfinnegan.github.io/react_node_ff/";
 
 const qrCodeHome = ({ flags, ldClient /*, ...otherProps */ }) => {
   let showFeature = ldClient.variation("reactQRCode");
-  
+
   return showFeature ? (
     <div>
-      <span><center>Scan me!</center></span>
+      <span>
+        <center>Scan me!</center>
+      </span>
       <br />
       <QRCode value={QRURL} />
     </div>

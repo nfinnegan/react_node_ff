@@ -12,11 +12,10 @@ function App() {
   useEffect(() => {
     setHeaderStyle("gray-app-header");
     const updateBackGroundColor = () => {
-
       // Sets the className to "purple-app-header", "blue-app-header", etc.
       const headerStyle = reactBackgroundColor + "-app-header";
-      setHeaderStyle(headerStyle)
-      
+      setHeaderStyle(headerStyle);
+
       return reactBackgroundColor;
     };
     updateBackGroundColor();
