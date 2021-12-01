@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react_node_ff/static/css/main.b3aa442e.chunk.css",
-    "main.js": "/react_node_ff/static/js/main.1aab76e1.chunk.js",
-    "main.js.map": "/react_node_ff/static/js/main.1aab76e1.chunk.js.map",
+    "main.js": "/react_node_ff/static/js/main.16a58fe9.chunk.js",
+    "main.js.map": "/react_node_ff/static/js/main.16a58fe9.chunk.js.map",
     "runtime-main.js": "/react_node_ff/static/js/runtime-main.26d2fa6f.js",
     "runtime-main.js.map": "/react_node_ff/static/js/runtime-main.26d2fa6f.js.map",
     "static/js/2.01434548.chunk.js": "/react_node_ff/static/js/2.01434548.chunk.js",
@@ -12,13 +12,12 @@
     "index.html": "/react_node_ff/index.html",
     "static/css/main.b3aa442e.chunk.css.map": "/react_node_ff/static/css/main.b3aa442e.chunk.css.map",
     "static/js/2.01434548.chunk.js.LICENSE.txt": "/react_node_ff/static/js/2.01434548.chunk.js.LICENSE.txt",
-    "static/media/ld_logo.6d1dea16.png": "/react_node_ff/static/media/ld_logo.6d1dea16.png",
-    "static/media/logo.6ce24c58.svg": "/react_node_ff/static/media/logo.6ce24c58.svg"
+    "static/media/ld_logo.6d1dea16.png": "/react_node_ff/static/media/ld_logo.6d1dea16.png"
   },
   "entrypoints": [
     "static/js/runtime-main.26d2fa6f.js",
     "static/js/2.01434548.chunk.js",
     "static/css/main.b3aa442e.chunk.css",
-    "static/js/main.1aab76e1.chunk.js"
+    "static/js/main.16a58fe9.chunk.js"
   ]
 }
