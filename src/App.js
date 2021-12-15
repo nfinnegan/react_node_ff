@@ -9,8 +9,8 @@ import SpinnyLogo from "./components/SpinnyLogo";
 import Toggle from "./components/Toggle";
 import { isAndroid, isIOS } from "react-device-detect";
 
-function App({ device }) {
-  console.log("app.js mobile is", device);
+function App() {
+  //console.log("app.js mobile is", device);
   const [headerStyle, setHeaderStyle] = useState("gray-app-header");
   const { reactBackgroundColor } = useFlags();
 
