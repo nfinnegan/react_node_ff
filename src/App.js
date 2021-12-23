@@ -7,16 +7,17 @@ import { useFlags } from "launchdarkly-react-client-sdk";
 import HeaderLDLogo from "./components/HeaderLogo";
 import SpinnyLogo from "./components/SpinnyLogo";
 import Toggle from "./components/Toggle";
-import { isAndroid, isIOS } from "react-device-detect";
+//import { isAndroid, isIOS } from "react-device-detect";
 
-function App() {
+function App(deviceType) {
   //console.log("app.js mobile is", device);
+  const [userdevice, setUserDevice] = useState("");
   const [headerStyle, setHeaderStyle] = useState("gray-app-header");
   const { reactBackgroundColor } = useFlags();
 
   useEffect(() => {
+    setUserDevice("");
     setHeaderStyle("gray-app-header");
-    // findMobileDevice();
     const updateBackGroundColor = () => {
       // Sets the className to "purple-app-header", "blue-app-header", etc.
       const headerStyle = reactBackgroundColor + "-app-header";
@@ -25,15 +26,7 @@ function App() {
       return reactBackgroundColor;
     };
     updateBackGroundColor();
-  }, [reactBackgroundColor]);
-
-  // const findMobileDevice = () => {
-  //   if (device === true && isIOS === true) {
-  //     console.log("is mobile is true");
-  //   } else {
-  //     console.log("is mobile is false");
-  //   }
-  // };
+  }, [reactBackgroundColor, userdevice]);
 
   return (
     <div className={headerStyle}>
