@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react_node_ff/static/css/main.c2abbfc1.chunk.css",
+    "main.css": "/react_node_ff/static/css/main.371d64d4.chunk.css",
     "main.js": "/react_node_ff/static/js/main.ded294e4.chunk.js",
     "main.js.map": "/react_node_ff/static/js/main.ded294e4.chunk.js.map",
     "runtime-main.js": "/react_node_ff/static/js/runtime-main.c4f35e03.js",
@@ -10,7 +10,7 @@
     "static/js/3.ca4c1d68.chunk.js": "/react_node_ff/static/js/3.ca4c1d68.chunk.js",
     "static/js/3.ca4c1d68.chunk.js.map": "/react_node_ff/static/js/3.ca4c1d68.chunk.js.map",
     "index.html": "/react_node_ff/index.html",
-    "static/css/main.c2abbfc1.chunk.css.map": "/react_node_ff/static/css/main.c2abbfc1.chunk.css.map",
+    "static/css/main.371d64d4.chunk.css.map": "/react_node_ff/static/css/main.371d64d4.chunk.css.map",
     "static/js/2.aa09f250.chunk.js.LICENSE.txt": "/react_node_ff/static/js/2.aa09f250.chunk.js.LICENSE.txt",
     "static/media/ld_logo_white.c7ccd94b.png": "/react_node_ff/static/media/ld_logo_white.c7ccd94b.png",
     "static/media/ld_logo_white_old.a7492e3d.png": "/react_node_ff/static/media/ld_logo_white_old.a7492e3d.png",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.c4f35e03.js",
     "static/js/2.aa09f250.chunk.js",
-    "static/css/main.c2abbfc1.chunk.css",
+    "static/css/main.371d64d4.chunk.css",
     "static/js/main.ded294e4.chunk.js"
   ]
 }
