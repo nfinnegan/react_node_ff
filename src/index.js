@@ -5,15 +5,18 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { asyncWithLDProvider } from "launchdarkly-react-client-sdk";
 import { deviceType, osName } from "react-device-detect";
-//^^import the react-device-detect npm package and do an install locally
+import { v4 as uuidv4 } from "uuid";
+
 const CLIENTKEY = "61857702b0d62a144cc6609b";
+
+let uuid = uuidv4();
 
 (async () => {
   console.log(deviceType, osName);
   const LDProvider = await asyncWithLDProvider({
     clientSideID: CLIENTKEY,
     user: {
-      key: "5de6fc8b62da8a3d7fc41402624f2319",
+      key: uuid,
       //dynamically set these custom attributes using the deviceType and osName selectors from the npm package
       custom: {
         device: deviceType,
