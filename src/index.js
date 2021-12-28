@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { asyncWithLDProvider } from "launchdarkly-react-client-sdk";
 import { deviceType, osName } from "react-device-detect";
-
+//^^import the react-device-detect npm package and do an install locally
 const CLIENTKEY = "61857702b0d62a144cc6609b";
 
 (async () => {
@@ -14,6 +14,7 @@ const CLIENTKEY = "61857702b0d62a144cc6609b";
     clientSideID: CLIENTKEY,
     user: {
       key: "5de6fc8b62da8a3d7fc41402624f2319",
+      //dynamically set these custom attributes using the deviceType and osName selectors from the npm package
       custom: {
         device: deviceType,
         operatingSystem: osName,
@@ -23,6 +24,8 @@ const CLIENTKEY = "61857702b0d62a144cc6609b";
 
   ReactDOM.render(
     <LDProvider>
+      {/* create two props to pass to App.js file and give them the values of each selector so that we 
+      can use the values in our App.js file */}
       <App device={deviceType} os={osName} />
     </LDProvider>,
     document.getElementById("root")

@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with the LaunchDarkly React QR Demo
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -6,10 +6,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Want to use GitHub Pages to publish your own copy of this? You've come to the right place!
 
-### Duplicating the repository
+### Duplicating the repository and creating a GitHub Page
 
 1. [Duplicate this repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/duplicating-a-repository) into your own GitHub repo
 1. Run `npm install` in your local root directory of the project
+1. In your GitHub repository, go to Settings > Pages and create a GitHub Page. Copy the URL of your GitHub Page, for use in the next section.
 
 ### Modifying variables for your own usage
 
@@ -19,8 +20,14 @@ Want to use GitHub Pages to publish your own copy of this? You've come to the ri
 
 ### Creating LaunchDarkly flags
 
-1. You can either use the LaunchDarkly Terraform integration with `main.tf` in the root directory, replacing the `access_token` and `project_key` values. (Careful, project_key appears twice!)
-1. Alternatively, you can manually create the flags in your project. Flag one needs a key of `reactBackgroundColor`, with `gray`, `purple`, `blue`, and `red` as string variations. Flag two is a boolean flag, with a key of `reactQRCode`.
+1. You can either use the LaunchDarkly Terraform integration with `main.tf` in the root directory, replacing the `access_token` and `project_key` values. (Careful, project_key appears multiple times!)
+1. Alternatively, you can manually create the flags in your project. You need the following flags:
+   1. A string flag with a key of `reactBackgroundColor`, with `gray`, `purple`, `blue`, and `red` as string variations.
+   1. Boolean flag, with a key of `reactQRCode`.
+   1. Boolean flag, with a key of `reactParentBrand`.
+   1. Boolean flag, with a key of `reactChildHeaderLogo`.
+   1. Boolean flag, with a key of `reactChildSpinnyLogo`.
+   1. Boolean flag, with a key of `reactChildToggle`.
 
 ### Testing
 
@@ -30,4 +37,4 @@ Want to use GitHub Pages to publish your own copy of this? You've come to the ri
 ### Deploying
 
 1. When you're ready, `npm run deploy` to deploy to a new `gh-pages` branch of your repository
-1. On your GitHub repository, go to Settings > Pages and publish a Page using the `gh-pages` branch in the `root` directory
+1. On your GitHub repository, go to Settings > Pages and ensure you're using the `gh-pages` branch in the `root` directory
