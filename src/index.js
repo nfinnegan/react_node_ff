@@ -4,25 +4,26 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { asyncWithLDProvider } from "launchdarkly-react-client-sdk";
-import { deviceType } from "react-device-detect";
+import { deviceType, osName } from "react-device-detect";
 
 const CLIENTKEY = "61857702b0d62a144cc6609b";
 
 (async () => {
-  console.log(deviceType);
+  console.log(deviceType, osName);
   const LDProvider = await asyncWithLDProvider({
     clientSideID: CLIENTKEY,
     user: {
       key: "5de6fc8b62da8a3d7fc41402624f2319",
       custom: {
         device: deviceType,
+        operatingSystem: osName,
       },
     },
   });
 
   ReactDOM.render(
     <LDProvider>
-      <App device={deviceType} />
+      <App device={deviceType} os={osName} />
     </LDProvider>,
     document.getElementById("root")
   );

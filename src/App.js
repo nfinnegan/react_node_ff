@@ -9,14 +9,16 @@ import SpinnyLogo from "./components/SpinnyLogo";
 import Toggle from "./components/Toggle";
 //import { isAndroid, isIOS } from "react-device-detect";
 
-function App(deviceType) {
-  //console.log("app.js mobile is", device);
-  const [userdevice, setUserDevice] = useState("");
+function App({ device, os }) {
+  console.log(device, os);
+  const [userDevice, setUserDevice] = useState("");
+  const [userOS, setOS] = useState("");
   const [headerStyle, setHeaderStyle] = useState("gray-app-header");
   const { reactBackgroundColor } = useFlags();
 
   useEffect(() => {
-    setUserDevice("");
+    setUserDevice(device);
+    setOS(os);
     setHeaderStyle("gray-app-header");
 
     const updateBackGroundColor = () => {
@@ -27,7 +29,7 @@ function App(deviceType) {
       return reactBackgroundColor;
     };
     updateBackGroundColor();
-  }, [reactBackgroundColor, userdevice]);
+  }, [reactBackgroundColor]);
 
   return (
     <div className={headerStyle}>
@@ -38,11 +40,13 @@ function App(deviceType) {
         <QRCode />
         <br />
         <br />
-        {/* <img src={osmo} className="App-logo" alt="logo" /> */}
+        <div>Current device is {userDevice}</div>
+        <div>Current operating system is {userOS}</div>
+        <br />
         <SpinnyLogo />
         <br />
         <br />
-        {/* <img src={toggle} className="toggle-logo" alt="toggle" /> */}
+
         <Toggle />
       </div>
     </div>
