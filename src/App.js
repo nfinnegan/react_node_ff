@@ -39,17 +39,17 @@ function App({ device, os, email }) {
         <br />
         <br />
         {/* showing on client the user's device and operating system for targeting purposes */}
-        <div>Current device is {userDevice}</div>
-        <div>Current operating system is {userOS}</div>
-        <div>
-          <PrivAtt />
-        </div>
+
         <br />
         <SpinnyLogo />
         <br />
         <br />
 
         <Toggle />
+      </div>
+      <div>
+        **if demo'ing private attributes:
+        <PrivAtt />
       </div>
     </div>
   );
