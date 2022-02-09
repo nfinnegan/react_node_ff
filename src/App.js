@@ -7,9 +7,10 @@ import { useFlags } from "launchdarkly-react-client-sdk";
 import HeaderLDLogo from "./components/HeaderLogo";
 import SpinnyLogo from "./components/SpinnyLogo";
 import Toggle from "./components/Toggle";
+import PrivAtt from "./components/PrivAtt";
 
 //pass device and os in as props
-function App({ device, os }) {
+function App({ device, os, email }) {
   //create two new useState to save the users device type and operating system
   const [userDevice, setUserDevice] = useState(device);
   const [userOS, setOS] = useState(os);
@@ -40,6 +41,9 @@ function App({ device, os }) {
         {/* showing on client the user's device and operating system for targeting purposes */}
         <div>Current device is {userDevice}</div>
         <div>Current operating system is {userOS}</div>
+        <div>
+          <PrivAtt />
+        </div>
         <br />
         <SpinnyLogo />
         <br />

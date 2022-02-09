@@ -9,26 +9,29 @@ import getUserId from "./utils/getUserId";
 
 const CLIENTKEY = "61857702b0d62a144cc6609b";
 let id = getUserId();
+let privAttrEmail = "nfinnegan@launchdarkly.com";
 
 (async () => {
-  console.log(deviceType, osName);
+  console.log(deviceType, osName, privAttrEmail);
   const LDProvider = await asyncWithLDProvider({
     clientSideID: CLIENTKEY,
     user: {
       key: id,
       //dynamically set these custom attributes using the deviceType and osName selectors from the npm package
+      // privateAttributeNames: [email],
+      email: privAttrEmail,
       custom: {
         device: deviceType,
         operatingSystem: osName,
       },
+      privateAttributeNames: ["email"],
     },
   });
-
   ReactDOM.render(
     <LDProvider>
       {/* create two props to pass to App.js file and give them the values of each selector so that we 
       can use the values in our App.js file */}
-      <App device={deviceType} os={osName} />
+      <App device={deviceType} os={osName} email={privAttrEmail} />
     </LDProvider>,
     document.getElementById("root")
   );
