@@ -87,6 +87,17 @@
   color: white;
 }
 
+.customer-logo {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.heart {
+  height: 150px;
+  padding-left: 50px;
+}
+
 .App-link {
   color: #61dafb;
 }

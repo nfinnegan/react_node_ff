@@ -8,6 +8,7 @@ import HeaderLDLogo from "./components/HeaderLogo";
 import SpinnyLogo from "./components/SpinnyLogo";
 import Toggle from "./components/Toggle";
 import PrivAtt from "./components/PrivAtt";
+import CustomerLogo from "./components/CustomerLogo";
 
 //pass device and os in as props
 function App({ device, os, email }) {
@@ -35,21 +36,14 @@ function App({ device, os, email }) {
         <HeaderLDLogo />
       </div>
       <div className={headerStyle}>
+        <CustomerLogo />
         <QRCode />
         <br />
         <br />
-        {/* showing on client the user's device and operating system for targeting purposes */}
 
-        <br />
-        <SpinnyLogo />
-        <br />
         <br />
 
         <Toggle />
-      </div>
-      <div>
-        **if demo'ing private attributes:
-        <PrivAtt />
       </div>
     </div>
   );
